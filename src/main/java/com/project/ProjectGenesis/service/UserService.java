@@ -64,12 +64,10 @@ public class UserService {
     public void editUser(User user){
         jdbcTemplate.update("UPDATE users SET name = ?, surname = ? WHERE id = ?",
                 user.getName(),user.getSurname(),user.getId());
-
     }
 
     public void deleteUser(long id){
         jdbcTemplate.update("DELETE from users where id = "+id);
-
     }
 
     private void checkPersonid(String personId) throws Exception {
@@ -87,7 +85,6 @@ public class UserService {
             throw new Exception("Person ID musi byt originalni");
         }
     }
-
 }
 
 

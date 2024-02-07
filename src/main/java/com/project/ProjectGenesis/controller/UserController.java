@@ -19,7 +19,6 @@ public class UserController {
     public void createUser(@RequestBody DetailedUser detailedUser) throws Exception {
         userService.createUser(detailedUser);
     }
-    //PŘESUNOUT LOGIKU DO
 
     @GetMapping("/user/{id}")
     public User getUserDetail(@PathVariable("id") long id, @QueryParam("detail") boolean detail){
@@ -28,7 +27,6 @@ public class UserController {
 
     @GetMapping("/users")
     public List<User> getAllUsers(@QueryParam("detail") boolean detail){
-
         return userService.getAllUsers(detail);
     }
 
